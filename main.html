@@ -1,16 +1,165 @@
+
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMDb - Movie Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background: #141414;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .movie-container {
+            max-width: 1000px;
+            margin: auto;
+            background: #222;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: #f5c518;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .moviePic {
+            height: 400px;
+            width: 270px;
+            opacity: 0.9;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .moviePic:hover {
+            opacity: 1;
+            transform: scale(1.04);
+        }
+
+        .movieDetail {
+            position: relative;
+            top: 15px;
+            width: 80%;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #d0d0d0;
+            margin: 0 auto 35px;
+        }
+
+        .rating {
+            color: #f5c518;
+            font-size: 20px;
+            margin: 25px 0;
+        }
+
+        .genre {
+            display: inline-block;
+            background: #383838;
+            color: #f5c518;
+            padding: 8px 18px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        .movie-info {
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        .watch-button {
+            display: inline-block;
+            background: #f5c518;
+            color: #141414;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+
+        .watch-button:hover {
+            background: #ffda44;
+        }
+
+        @media (max-width: 600px) {
+            .movie-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .moviePic {
+                height: 320px;
+                width: 215px;
+            }
+
+            .movieDetail {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <div class="movie-container">
+        <h1>Interstellar</h1>
+
+        <img
+            class="moviePic"
+            src="https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+            alt="Interstellar movie poster"
+        >
+
+        <div class="rating">⭐ 8.7/10</div>
+
+        <div>
+            <span class="genre">Sci-Fi</span>
+            <span class="genre">Adventure</span>
+            <span class="genre">Drama</span>
+        </div>
+
+        <p class="movieDetail">
+            A team of explorers travels beyond this galaxy to discover
+            whether mankind has a future among the stars. As Earth faces
+            an environmental crisis, a former pilot joins a dangerous
+            mission through a mysterious wormhole in search of a new home
+            for humanity. A visually stunning journey about love, time,
+            sacrifice, and the survival of the human race.
+        </p>
+
+        <div class="movie-info">
+            <p>Release Year: 2014</p>
+            <p>Director: Christopher Nolan</p>
+            <p>Duration: 2h 49min</p>
+        </div>
+
+        <a href="https://www.imdb.com/title/tt0816692/"
+           target="_blank"
+           class="watch-button">
+            View on IMDb
+        </a>
+    </div>
 
 </body>
-
 </html>
